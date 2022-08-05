@@ -1,0 +1,40 @@
+1 - Criar container
+   docker run -it "nome da imagem"
+   
+   exemplo : docker run -it ubuntu bash  
+           
+   
+2 - Lista todos os containeres (ativos/inativos)
+    docker ps -a
+	
+3 - Exclui todos os containeres
+    docker rm $(docker ps -a -q) -f
+
+4 - criar e destruir o container a sair que o processo que estiver segurando o processo do container for finalizado
+
+    docker run -it --rm ubuntu bash
+	
+5 - Habilita portas do webservice
+
+    docker run -d -p 80:80 nginx  => comando roda o container na porta 80 sem atachar nenhum processo ao mesmo	
+	
+6 - Comando docker para parar o container que está rodando 
+   docker stop id_container
+   
+7 - Comando docker para dar um nome a um container a ser criado
+
+    docker run -d --name nginx nginx
+	
+8 - Comando docker para excluir container pelo nome  
+   docker rm nome_container -f
+   
+9 - Comando docker para criar container o nomeando com porta
+    docker run --name nginx -d -p 8080:80 nginx
+	
+10 - Comando docker para acessar um determinado container e interagir com ele atravez de execução de comandos
+     docker exec nginx
+
+11 - Comando docker para executar container de forma iterativa para rodar comandos direto dentro do container
+     docker exec -it nginx bash	 
+	 
+12 - 	 
