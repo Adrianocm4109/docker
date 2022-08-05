@@ -37,4 +37,3 @@
 11 - Comando docker para executar container de forma iterativa para rodar comandos direto dentro do container
      docker exec -it nginx bash	 
 	 
-12 - 	 
